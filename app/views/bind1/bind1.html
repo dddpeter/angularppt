@@ -1,0 +1,17 @@
+<!--  -->
+<bind1 t-value="{{ value }}" style="margin-top: 1rem"></bind1>
+
+<form class="am-form am-form-horizontal">
+    <div class="am-form-group">
+        <label for="doc-ipt-3" class="am-u-sm-3 am-form-label">当前页</label>
+        <div class="am-u-sm-9">
+            <input type="text" ng-model="value" id="doc-ipt-3" placeholder="请输入内容">
+        </div>
+    </div>
+</form>
+
+<bind2 t-value="value"></bind2>
+<div><span>当前模块绑定的文字:</span><br/> <span ng-bind="value"></span></div>
+
+
+<p><bind3 show-alert="show()" show-alert-my="show1(name)"></bind3></p>

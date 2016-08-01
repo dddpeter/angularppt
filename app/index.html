@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="zh" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="zh" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="zh" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="zh" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AngularJS App</title>
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/amazeui/dist/css/amazeui.flat.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+
+</head>
+<body ng-class="{true:'noscroll',false:'scroll'}[showNav]">
+<header data-am-widget="header"
+        class="am-header am-header-default"  ng-init="showNav=false"
+        ui-view="header">
+
+</header>
+<div class="mask" ng-show="showNav" ng-click="showNav=!showNav"></div>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div  ui-view="body" class="content"></div>
+
+  <div class="footer">Powered by dddpeter: v<span app-version></span></div>
+
+<!--[if lt IE 9]-->
+    <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="bower_components/respond/dest/respond.min.js"></script>
+<!--[endif]-->﻿​
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+ <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+ <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+ <script src="bower_components/angular-bindonce/bindonce.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="app.js"></script>
+  <script src="states.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+<script src="components/md5.js"></script>
+  <script src="components/commonDiretives.js"></script>
+  <script src="components/parameters.js"></script>
+  <script src="directives/userDirective.js"></script>
+  <script src="services/baiduMapService.js"></script>
+  <script src="services/userService.js"></script>
+</body>
+</html>

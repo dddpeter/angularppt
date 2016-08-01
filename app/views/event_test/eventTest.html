@@ -1,0 +1,25 @@
+<table class="am-table am-table-bordered" style="font-size:10px">
+    <tr><th>作用域</th><th>值</th><th>向上</th><th>向下</th></tr>
+    <tr>
+        <td>root</td>
+        <td> {{ count }}</td>
+        <td> <button type="button" ng-click="$emit('addEvent1')" class="am-btn am-btn-warning am-round am-btn-xs">$emit</button></td>
+        <td> <button type="button"  ng-click="$broadcast('addEvent2')" class="am-btn am-btn-warning am-round am-btn-xs">$broadcast</button></td>
+    </tr>
+    <tr ng-controller="EventCtrl">
+        <td>me</td>
+        <td>  me->{{ count }}<br/>
+            <span ng-controller="childCtrl" ng-click="$broadcast('addEvent1')" > child1->{{ count }}</span><br/>
+            <span ng-controller="childCtrl" ng-click="$emit('addEvent2')"> child2->{{ count }}</span>
+        </td>
+        <td> <button  ng-click="$emit('addEvent1')" type="button" class="am-btn am-btn-warning am-round am-btn-xs">$emit</button></td>
+        <td> <button ng-click="$broadcast('addEvent2')" type="button" class="am-btn am-btn-warning am-round am-btn-xs">$broadcast</button></td>
+    </tr>
+
+    <tr ng-controller="brotherCtrl">
+        <td>borther</td>
+        <td> {{ count }}</td>
+        <td> <button  ng-click="$emit('addEvent1')" type="button" class="am-btn am-btn-warning am-round am-btn-xs">$emit</button></td>
+        <td> <button  ng-click="$broadcast('addEvent2')" type="button" class="am-btn am-btn-warning am-round am-btn-xs">$broadcast</button></td>
+    </tr>
+</table>

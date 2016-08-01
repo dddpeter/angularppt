@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="views/inter_services/iservice.css">
+<tabs>
+    <pane title-me="$location">
+        <div>
+            <p>$location.absUrl()<br/>{{ myUrl }}</p>
+            <p>$location.path()<br/>{{ path }}</p>
+            <p>$location.search({a: 'b', c: true})<br/>
+                <button class="am-btn am-btn-primary am-btn-sm" ng-click="setSearch()">添加请求参数</button>
+            </p>
+            <p>$location.path('/login').search('x=y')<br/>
+                <button class="am-btn am-btn-primary am-btn-sm" ng-click="setPathSearch()">页面跳转</button>
+            </p>
+        </div>
+    </pane>
+    <pane title-me="$http">
+        <div>
+            <table class="am-table am-table-bordered" style="font-size:10px">
+                <h2>北京</h2>
+                <tr><th>date</th><th>图标</th><th>温度</th><th>天气</th><th>风向</th></tr>
+                <tr ng-repeat="item in data.results[0].weather_data">
+                    <td>{{ item.date| limitTo:2 }}</td>
+                    <td><img ng-src="{{item.dayPictureUrl}}"/></td>
+                    <td>{{ item.temperature }}</td>
+                    <td>{{ item.weather }}</td>
+                    <td>{{ item.wind }}</td>
+                </tr>
+                </table>
+                <h2>上海</h2>
+                <table class="am-table am-table-bordered" style="font-size:10px">
+                    <tr><th>date</th><th>图标</th><th>温度</th><th>天气</th><th>风向</th></tr>
+                    <tr ng-repeat="item in data2.results[0].weather_data">
+                        <td>{{ item.date| limitTo:2 }}</td>
+                        <td><img ng-src="{{item.dayPictureUrl}}"/></td>
+                        <td>{{ item.temperature }}</td>
+                        <td>{{ item.weather }}</td>
+                        <td>{{ item.wind }}</td>
+                    </tr>
+
+                </table>
+            <h2>天津</h2>
+            <table class="am-table am-table-bordered" style="font-size:10px">
+                <tr><th>date</th><th>图标</th><th>温度</th><th>天气</th><th>风向</th></tr>
+                <tr ng-repeat="item in data3.results[0].weather_data">
+                    <td>{{ item.date| limitTo:2 }}</td>
+                    <td><img ng-src="{{item.dayPictureUrl}}"/></td>
+                    <td>{{ item.temperature }}</td>
+                    <td>{{ item.weather }}</td>
+                    <td>{{ item.wind }}</td>
+                </tr>
+
+            </table>
+            <h2>深圳</h2>
+            <table class="am-table am-table-bordered" style="font-size:10px">
+                <tr><th>date</th><th>图标</th><th>温度</th><th>天气</th><th>风向</th></tr>
+                <tr ng-repeat="item in data4.results[0].weather_data">
+                    <td>{{ item.date| limitTo:2 }}</td>
+                    <td><img ng-src="{{item.dayPictureUrl}}"/></td>
+                    <td>{{ item.temperature }}</td>
+                    <td>{{ item.weather }}</td>
+                    <td>{{ item.wind }}</td>
+                </tr>
+
+            </table>
+        </div>
+    </pane>
+    <pane title-me="$timeout">
+        <div>{{myHeader}}<br/>
+            <button class="am-btn am-btn-primary am-btn-sm" ng-click="myTimeout()">开始$timeout</button></div>
+    </pane>
+    <pane title-me="$interval">
+        <div>{{myTimer}}<br/>
+        <button class="am-btn am-btn-success am-btn-sm"
+                    ng-click="myInterval()">开始</button>
+            <button class="am-btn am-btn-danger am-btn-sm"
+                    ng-click="cancel()">停止</button><br/>
+
+       </div>
+    </pane>
+</tabs>

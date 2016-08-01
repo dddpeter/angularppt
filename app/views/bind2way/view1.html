@@ -1,0 +1,10 @@
+<form class="am-form am-form-horizontal" style="margin-top: 0.5rem">
+    <div class="am-form-group">
+        <label for="doc-ipt-3" class="am-u-sm-3 am-form-label">用户名</label>
+        <div class="am-u-sm-9">
+            <input type="text" ng-model="user.name" id="doc-ipt-3" placeholder="请输入用户名">
+        </div>
+    </div>
+    </form>
+<div><span>采用ng-bind绑定：</span><span ng-bind="user.name"></span></div>
+<div><span>采用{{  }}模板绑定：</span><span></span>{{ user.name }}</div>

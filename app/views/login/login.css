@@ -1,0 +1,22 @@
+.form-div {
+  margin: 20% 10px;
+  border: 2px solid dodgerblue;
+  border-radius: 15px; }
+  .form-div h1 {
+    text-align: center; }
+
+.loginForm {
+  font-size: 1.2rem; }
+  .loginForm div {
+    padding: 0 5px 0 0; }
+  .loginForm label {
+    padding-left: 5px; }
+  .loginForm input, .loginForm button {
+    font-size: 1rem !important; }
+  .loginForm label {
+    padding-right: 0; }
+
+.am-text {
+  margin-top: 5px; }
+
+/*# sourceMappingURL=login.css.map */

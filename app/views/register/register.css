@@ -1,0 +1,22 @@
+.form-div {
+  margin: 20% 10px;
+  border: 2px solid dodgerblue;
+  border-radius: 15px; }
+  .form-div h1 {
+    text-align: center; }
+
+.registerForm {
+  font-size: 1.2rem; }
+  .registerForm div {
+    padding: 0 5px 0 0; }
+  .registerForm label {
+    padding-left: 5px; }
+  .registerForm input, .registerForm button {
+    font-size: 1rem !important; }
+  .registerForm label {
+    padding-right: 0; }
+
+.am-text {
+  margin-top: 5px; }
+
+/*# sourceMappingURL=register.css.map */

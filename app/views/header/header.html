@@ -1,0 +1,25 @@
+<div class="am-header-left am-header-nav">
+    <a>
+        <i class="am-header-icon am-icon-home"></i>
+    </a>
+</div>
+<h1 class="am-header-title">
+    <a>
+        {{ title }}
+    </a>
+</h1>
+<div class="am-header-right am-header-nav">
+    <a  class="" ng-click="toggleNav()" >
+        <i class="am-header-icon am-icon-bars"></i>
+    </a>
+</div>
+<ul class="menu"  ng-class="{true:'display',false:'nodisplay'}[showNav]">
+    <li>
+        <a ng-click="toggleNav()" style="text-align: right;height: 30px;line-height: 30px">
+            <i class="am-header-icon am-icon-close"></i>
+        </a>
+    </li>
+    <li ng-repeat="m in menuList">
+        <a ng-click="toggleNav()" ui-sref="{{ m.url }}">{{ m.name }}</a>
+    </li>
+</ul>
